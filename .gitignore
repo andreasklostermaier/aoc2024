@@ -5,4 +5,4 @@
 Cargo.lock
 
 # advent of code input files
-/data
+input.txt
