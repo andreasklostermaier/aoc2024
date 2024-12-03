@@ -1,3 +1,6 @@
+// © 2024 Andreas Klostermaier
+// MIT LICENSE
+
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
@@ -5,10 +8,8 @@ use std::collections::HashMap;
 
 
 fn main() {
-
     part_one();
     part_two();
-
 }
 
 

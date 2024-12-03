@@ -1,12 +1,13 @@
+// © 2024 Andreas Klostermaier
+// MIT LICENSE
+
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
 fn main() {
-
     part_one();
     part_two();
-
 }
 
 
@@ -66,14 +67,14 @@ fn part_two() {
                     .filter_map(|s| s.parse::<i32>().ok())
                     .collect();
 
-            let mut safe_counter       = 0i32;
+            let mut safe_counter = 0i32;
 
             for v in 0..=levels.len() {
                 let mut variant = levels.clone();
                 if v < levels.len() { variant.remove(v); }
 
-                let mut direction          = 0i32;
-                let mut prev_level         = 0i32;
+                let mut direction  = 0i32;
+                let mut prev_level = 0i32;
 
                 let safe = 'outer: {
 
