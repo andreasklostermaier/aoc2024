@@ -29,7 +29,7 @@ fn part_one() {
 
 fn part_two() {
 
-    let memory        = fs::read_to_string("./aoc03/data/input.txt").unwrap();
+    let memory        = fs::read_to_string("./aoc03/data/input.txt").unwrap().replace("\n", "");
     let do_pattern    = Regex::new(r"(^|do\(\)).*?don't\(\)").unwrap();
     let mul_pattern   = Regex::new(r"mul\((?<op_a>[0-9]+)\,(?<op_b>[0-9]+)\)").unwrap();
     let mut total_sum = 0u32;
