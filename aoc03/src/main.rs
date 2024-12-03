@@ -35,6 +35,7 @@ fn part_two() {
     let mut total_sum = 0u32;
 
     let do_chunks: Vec<&str> = do_pattern.find_iter(&memory).map(|m| m.as_str()).collect();
+    for do_chunk in do_chunks {
         let chunk_sum: u32 = mul_pattern.captures_iter(do_chunk).map(|caps| {
             let op_a = caps.name("op_a").unwrap().as_str().parse::<u32>().unwrap();
             let op_b = caps.name("op_b").unwrap().as_str().parse::<u32>().unwrap();
