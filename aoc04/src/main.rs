@@ -92,7 +92,6 @@ fn part_two() {
     let nr_of_cols = input_raw.lines().next().unwrap_or("").chars().count();
     let input = input_raw.replace("\n", "");
     let pattern = "MMASS MSAMS SMASM SSAMM";
-    println!("rows: {nr_of_rows}, cols: {nr_of_cols}");
 
     for x in 0..nr_of_cols-2 {
         for y in 0..nr_of_rows-2 {
